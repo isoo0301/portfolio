@@ -1,58 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Lauren's Portfolio</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://fonts.googleapis.com/css2?family=Cuprum:ital,wght@0,400..700;1,400..700&family=Gowun+Dodum&family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <title>Lauren Kwon's Portfolio</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <header>
-    <h1>Hello, I'm Lauren!</h1>
-    <p>Computer Science student @ Iowa State University & Active Researcher</p>
-  </header>
+  <!-- NAVBAR -->
+  <nav>
+    <div class="left">
+      <a href="/">Lauren Kwon</a>
+    </div>
+    <div class="right">
+      <a href="http://github.com" target="_blank" rel="noopener noreferrer">
+        <i class="fa-brands fa-github"></i>
+        <span>Github</span>
+      </a>
 
-  <section id="about">
-    <h2>About Me</h2>
-    <p>
-      I'm passionate about computer science research and software development.
-      Currently working on exciting projects in cloud computing and data security.
-    </p>
+      <a href="http://linkein.com" target="_blank" rel="noopener noreferrer">
+        <i class="fa-brands fa-linkedin"></i>
+        <span>LinkedIn</span>
+      </a>
+
+       <a href="mailto:lauren030109@gmail.com" target="_blank" rel="noopener noreferrer">
+       <i class="fa-solid fa-envelope"></i>
+        <span>Email</span>
+      </a>
+
+    </div>
+  </nav>
+
+  <main>
+  <!-- SECTION1: Hero -->
+  <section class="hero-section">
+    <div class="text">
+      <h2>Hi, I'm Lauren 👋</h2>
+      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sapiente impedit eveniet pariatur 
+        debitis quasi temporibus laborum molestiae! Temporibus sed necessitatibus quibusdam architecto, 
+        sapiente placeat sunt doloremque ullam dolores molestias nostrum aut laudantium debitis id 
+        cupiditate deserunt explicabo mollitia ea vel assumenda quas. Hic odit repudiandae sint aut 
+        harum alias architecto.</p>
+        <div class="links">
+          <a href="#skills">
+            <i class="fa-solid fa-code"></i>
+            <span>Skills</span>
+          </a>
+
+          <a href="#testimony">
+            <i class="fa-solid fa-code"></i>
+            <span>Testimony</span>
+          </a>
+          <a href="#contact">
+            <i class="fa-solid fa-code"></i>
+            <span>Contact</span>
+          </a>
+        </div>
+
+    
+
+    </div>
+      <div class="headshot">
+        <img src="images/headshot.webp" alt="LKheadshot">
+      </div>
+
   </section>
+    <!-- SECTION2: Skills -->
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="text">
+      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellat atque, alias ad ipsa eaque nisi sit non ipsam quo, illum culpa eligendi dicta itaque doloremque incidunt minima nobis reprehenderit. Dolores?</p>
+    </div>
 
-  <section id="projects">
-    <h2>Projects</h2>
-    <ul>
-      <li>
-        <strong>Study Buddy App</strong> — A group study tracking app with chat functionality.  
-        <a href="https://github.com/isoo0301/study-buddy">GitHub Repo</a>
-      </li>
-      <li>
-        <strong>Portfolio Website</strong> — My personal website showcasing my work.
-      </li>
-      <!-- Add more projects here -->
-    </ul>
+    <div class="cells">
+      <div class="cell">
+        <i class="fa-brands fa-python"></i>
+        <span>Python</span>
+      </div>
 
-  </section>  <section id="research">
-    <h2>Research</h2>
-    <ul>
-      <li>
-        <strong>NSF Research Experiences for Undergraduates </strong> — Researcher at University of Missouri in Consumer Networking for Summer 2025 (May - July)
-      </li>
-      <li>
-        <strong>Research Assistant</strong> — @Iowa State University Ying Cai's lab
-      </li>
-      <!-- Add more projects here -->
-    </ul>
+      <div class="cell">
+        <i class="fa-brands fa-java"></i>
+        <span>Java</span>
+      </div>
+
+      <div class="cell">
+        <i class="fa-brands fa-html5"></i>
+        <span>HTML</span>
+      </div>
+    </div>
+
   </section>
+    <!-- SECTION3: Testimony -->
+  <section id="testimony">
 
+  </section>
+  <!-- SECTION4: Contact -->
   <section id="contact">
-    <h2>Contact Me</h2>
-    <p>Email: lauren030109@gmail.com</p>
-  </section>
 
-  <footer>
-    <p>© 2025 Lauren</p>
-  </footer>
+  </section>
+  </main>
+
 </body>
 </html>
