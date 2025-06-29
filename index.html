@@ -1,147 +1,151 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link href="https://fonts.googleapis.com/css2?family=Cuprum:ital,wght@0,400..700;1,400..700&family=Gowun+Dodum&family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <title>Lauren Kwon's Portfolio</title>
-  <link rel="stylesheet" href="styles.css" />
+  <title>Lauren Kwon | Portfolio</title>
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Google Font: Cuprum -->
+  <link href="https://fonts.googleapis.com/css2?family=Cuprum:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Cuprum', 'sans-serif'],
+          },
+        },
+      },
+    }
+  </script>
 </head>
-<body>
-  <!-- NAVBAR -->
-  <nav>
-    <div class="left">
-      <a href="/">Lauren Kwon</a>
+<body class="font-sans bg-white text-gray-900">
+
+  <!-- Navbar -->
+  <nav class="flex justify-between items-center px-6 py-4 bg-white shadow sticky top-0 z-50">
+    <div class="text-xl font-bold">
+      <a href="/" class="hover:text-blue-600">Lauren Kwon</a>
     </div>
-    <div class="right">
-      <a href="http://github.com" target="_blank" rel="noopener noreferrer">
-        <i class="fa-brands fa-github"></i>
-        <span>Github</span>
+    <div class="flex space-x-6 text-sm">
+      <a href="https://github.com/isoo0301" class="flex items-center gap-1 hover:text-blue-600">
+        <i class="fa-brands fa-github"></i> Github
       </a>
-
-      <a href="http://linkein.com" target="_blank" rel="noopener noreferrer">
-        <i class="fa-brands fa-linkedin"></i>
-        <span>LinkedIn</span>
+      <a href="https://www.linkedin.com/in/lauren-kwon01/" class="flex items-center gap-1 hover:text-blue-600">
+        <i class="fa-brands fa-linkedin"></i> LinkedIn
       </a>
-
-       <a href="mailto:lauren030109@gmail.com" target="_blank" rel="noopener noreferrer">
-       <i class="fa-solid fa-envelope"></i>
-        <span>Email</span>
+      <a href="mailto:lauren030109@gmail.com" class="flex items-center gap-1 hover:text-blue-600">
+        <i class="fa-solid fa-envelope"></i> Email
       </a>
-
     </div>
   </nav>
 
-  <main>
-  <!-- SECTION1: Hero -->
-  <section class="hero-section">
-    <div class="text">
-      <h2>Hi, I'm Lauren 👋</h2>
-      <p>Hello! I'm a software developer currently studying Computer Science and Statistics at Iowa State University. 
+  <!-- Hero Section -->
+  <section class="flex flex-col md:flex-row items-center justify-between p-8 max-w-5xl mx-auto gap-8">
+    <div class="max-w-xl">
+      <h2 class="text-4xl font-bold mb-4">Hi, I'm Lauren 🙋🏻‍♀️</h2>
+      <p class="text-lg text-gray-700">
+        I'm a software developer currently studying Computer Science and Statistics at Iowa State University.
         I have a strong interest in full-stack development and data-driven solutions.
         I’m always eager to deepen my technical expertise and explore emerging technologies.
-     </p>
-
-     <!-- <p>
-      Since childhood, my family has hosted international homestay students, and I’ve also participated in homestay programs abroad. 
-      These cross-cultural experiences helped me form lifelong friendships with people from around the world and sparked a deep appreciation for diverse perspectives. 
-      They’ve shaped not only my personal growth but also how I approach problem-solving and collaboration in software development—always with empathy, adaptability, and a global mindset.
-    </p>
-
-    <p>
-      I’m a detail-oriented and driven learner who approaches every challenge with curiosity and commitment. 
-      Whether I’m diving into a new programming language, refining a project, or exploring new ideas through film or travel, 
-      I’m constantly striving to grow and create meaningful impact through technology.
-    </p> -->
-
-        <div class="links">
-          <a href="#skills">
-            <i class="fa-solid fa-code"></i>
-            <span>Skills</span>
-          </a>
-<!-- 
-          <a href="#testimony">
-            <i class="fa-solid fa-code"></i>
-            <span>Testimony</span>
-          </a> -->
-          <a href="#contact">
-            <i class="fa-solid fa-code"></i>
-            <span>Contact</span>
-          </a>
-        </div>
-
+      </p>
+      <div class="mt-6 flex gap-4">
+        <a href="#skills" class="text-blue-600 hover:underline flex items-center gap-2">
+          <i class="fa-solid fa-code"></i> Skills
+        </a>
+        <a href="#contact" class="text-blue-600 hover:underline flex items-center gap-2">
+          <i class="fa-solid fa-code"></i> Contact
+        </a>
+        <a href="blog.html" class="text-blue-600 hover:underline flex items-center gap-2">
+          <i class="fa-solid fa-book"></i> Blog
+        </a>
+      </div>
+    </div>
+    <div class="w-48 h-48">
+      <img src="images/headshot.webp" alt="Lauren's Headshot" class="rounded-full object-cover shadow-md">
+    </div>
     
 
-    </div>
-      <div class="headshot">
-        <img src="images/headshot.webp" alt="LKheadshot">
-      </div>
-
   </section>
-    <!-- SECTION2: Skills -->
-  <section id="skills" class="skills-section">
-    <h2>Skills</h2>
-    <div class="text">
-      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellat atque, alias ad ipsa eaque nisi sit non ipsam quo, illum culpa eligendi dicta itaque doloremque incidunt minima nobis reprehenderit. Dolores?</p>
+
+  <!-- Experiences -->
+  <section id="experiences" class="py-16 bg-gray-50">
+    <div class="max-w-4xl mx-auto px-4">
+      <h2 class="text-3xl font-bold mb-6">Experiences</h2>
+      <ul class="space-y-4 list-disc list-inside text-gray-800">
+        <li><strong>REU Research Intern</strong> @ University of Missouri – Consumer Networking</li>
+        <li><strong>Research Lab Assistant</strong> @ ISU – Agricultural Biosystems Engineering</li>
+        <li><strong>Research Lab Assistant</strong> @ ISU – Agronomy</li>
+      </ul>
     </div>
-
-    <div class="cells">
-      <div class="cell">
-        <img src="./images/Python-logo.webp" alt="python logo">
-        <span>Python</span>
-      </div>
-
-      <div class="cell">
-         <img src="./images/Java-logo.webp" alt="java logo">
-        <span>Java</span>
-      </div>
-
-      <div class="cell">
-       <img src="./images/html-logo.webp" alt="html logo">
-        <span>HTML</span>
-      </div>
-
-       <div class="cell">
-       <img src="./images/css-logo.webp" alt="css logo">
-        <span>CSS</span>
-      </div>
-
-       <div class="cell">
-       <img src="./images/javascript-logo.webp" alt="javascript logo">
-        <span>JavaScript</span>
-      </div>
-
-    </div>
-
   </section>
-    <!-- SECTION3: Testimony -->
-  <section id="testimony">
 
-  </section>
-  <!-- SECTION4: Contact -->
-  <section id="contact" class="contact-section">
-    <h2>Contact</h2>
-    <div class="group">
-      <div class="text">
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aut in eligendi fuga ullam dignissimos. Eaque esse sit tenetur non porro nihil odit nemo. Voluptates, delectus sunt consequuntur, quae quo, nulla quisquam adipisci illum tenetur recusandae nostrum possimus hic laudantium ex itaque odit! Dolores officiis necessitatibus provident facilis autem quidem! Ea?
-      </div>
-      <div class="form">
-        <label for="name">Name</label>
-        <input type="text" id="name">
+  <!-- Skills Section -->
+  <section id="skills" class="py-16">
+    <div class="max-w-4xl mx-auto px-4">
+      <h2 class="text-3xl font-bold mb-6">Skills</h2>
+      <p class="text-gray-700 mb-8">
+        I started programming with Python. My primary programming language is Java, and I am learning JavaScript, CSS, HTML this Summer.
+        I plan to take AWS Cloud Practitioner Certification in the beginning of September 2025.
+      </p>
 
-        <label for="email">Email</label>
-        <input type="email" id="email">
-
-        <label for="message">Message</label>
-        <textarea id="message" col="30" rows="10"></textarea>
-        <button type="submit">Send Message</button>
+      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-6">
+        <div class="flex flex-col items-center">
+          <img src="./images/Python-logo.webp" alt="Python logo" class="w-12 h-12 mb-2">
+          <span>Python</span>
+        </div>
+        <div class="flex flex-col items-center">
+          <img src="./images/Java-logo.webp" alt="Java logo" class="w-12 h-12 mb-2">
+          <span>Java</span>
+        </div>
+        <div class="flex flex-col items-center">
+          <img src="./images/html-logo.webp" alt="HTML logo" class="w-12 h-12 mb-2">
+          <span>HTML</span>
+        </div>
+        <div class="flex flex-col items-center">
+          <img src="./images/css-logo.webp" alt="CSS logo" class="w-12 h-12 mb-2">
+          <span>CSS</span>
+        </div>
+        <div class="flex flex-col items-center">
+          <img src="./images/javascript-logo.webp" alt="JavaScript logo" class="w-12 h-12 mb-2">
+          <span>JavaScript</span>
+        </div>
       </div>
     </div>
   </section>
-  </main>
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-16 bg-gray-100">
+    <div class="max-w-4xl mx-auto px-4">
+      <h2 class="text-3xl font-bold mb-6">Contact</h2>
+      <p class="mb-8 text-gray-700">
+        I'm a junior at Iowa State University studying Computer Science and minoring in Statistics.
+        My goal for this Fall semester is to engage in many CS club events and have 3 personal projects done.
+        I'm open to collaborate and participate in hackathons, so please feel free to reach out to me!
+      </p>
+      <form action="https://formspree.io/f/YOUR_ID" method="POST" class="grid gap-4 max-w-lg">
+        <div>
+          <label for="name" class="block mb-1 font-medium">Name</label>
+          <input type="text" id="name" name="name" class="w-full border border-gray-300 p-2 rounded" required />
+        </div>
+        <div>
+          <label for="email" class="block mb-1 font-medium">Email</label>
+          <input type="email" id="email" name="_replyto" class="w-full border border-gray-300 p-2 rounded" required />
+        </div>
+        <div>
+          <label for="message" class="block mb-1 font-medium">Message</label>
+          <textarea id="message" name="message" rows="5" class="w-full border border-gray-300 p-2 rounded" required></textarea>
+        </div>
+        <button type="submit" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Send Message</button>
+      </form>
+    </div>
+  </section>
 
 </body>
 </html>

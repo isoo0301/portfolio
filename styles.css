@@ -95,6 +95,19 @@ nav .right a span{
     border-radius: 50%;
     width:350px;
 }
+/* SECTION 1.5: Experiences */
+.experiences-section{
+    padding:0 50px;
+    margin-bottom:100px;
+}
+.experiences-section h2{
+    text-align: center;
+   font-size: 35px;
+}
+.experiences-section .text{
+    text-align: center;
+    margin-bottom: 20px;
+}
 /* SECTION 2: Skills */
 .skills-section{
     padding:0 50px;
