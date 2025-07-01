@@ -4,88 +4,83 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Lauren Kwon - Resume</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      max-width: 800px;
-      margin: 2rem auto;
-      padding: 0 1rem;
-      line-height: 1.6;
-      background: #f9f9f9;
-      color: #333;
-    }
-    h1, h2 {
-      color: #2c3e50;
-    }
-    .contact-info {
-      font-size: 0.9rem;
-      margin-bottom: 1rem;
-    }
-    section {
-      margin-bottom: 2rem;
-    }
-    ul {
-      list-style-type: disc;
-      margin-left: 1.5rem;
-    }
-    strong {
-      color: #34495e;
-    }
-  </style>
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
+<body class="bg-gray-100 text-gray-800 font-sans leading-relaxed">
 
-  <h1>Lauren Kwon</h1>
-  <div class="contact-info">
-    <p>📞 515-337-5710 | 📧 <a href="mailto:lauren030109@gmail.com">lauren030109@gmail.com</a> | 🔗 <a href="https://www.linkedin.com/in/lauren-kwon01/" target="_blank" rel="noopener noreferrer">LinkedIn</a></p>
+  <div class="max-w-3xl mx-auto p-6 bg-white shadow-md mt-10 rounded-lg">
+    <!-- Header -->
+    <header class="mb-6">
+      <h1 class="text-3xl font-bold text-gray-900">Lauren Kwon</h1>
+      <div class="text-sm text-gray-600 mt-2">
+        📞 515-337-5710 |
+        📧 <a href="mailto:lauren030109@gmail.com" class="text-blue-600 hover:underline">lauren030109@gmail.com</a> |
+        🔗 <a href="https://www.linkedin.com/in/lauren-kwon01/" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">LinkedIn</a>
+      </div>
+    </header>
+
+    <!-- Education -->
+    <section class="mb-8">
+      <h2 class="text-xl font-semibold text-gray-800 border-b pb-1 mb-3">Education</h2>
+      <p class="font-semibold text-gray-700">Iowa State University — Ames, Iowa</p>
+      <p>Bachelor of Science in Computer Science (GPA: 3.9/4.00), Minor in Statistics</p>
+      <p>Expected Graduation: May 2027</p>
+      <p class="mt-2 text-sm text-gray-600">
+        <span class="font-medium text-gray-700">Relevant Coursework:</span> Data Structures (Java), OOP (Java), Processing Scientific Data (SAS), Intermediate Statistical Concepts, Linear Algebra, Discrete Structures, Calculus I-III
+      </p>
+    </section>
+
+    <!-- Experience -->
+    <section class="mb-8">
+      <h2 class="text-xl font-semibold text-gray-800 border-b pb-1 mb-3">Experience</h2>
+
+      <div class="mb-4">
+        <h3 class="font-semibold text-gray-700">Research Lab Assistant — Dr. Ying Cai, Iowa State University</h3>
+        <p class="text-sm text-gray-500">Jan 2025 – Present</p>
+        <ul class="list-disc list-inside mt-2 text-sm text-gray-700 space-y-1">
+          <li>Reviewed literature on convex polyhedral algorithms for rank-aware queries.</li>
+          <li>Implemented simplex method-based optimizations with graduate researchers.</li>
+          <li>Generated test data and evaluated scalability and redundancy reduction.</li>
+        </ul>
+      </div>
+
+      <div>
+        <h3 class="font-semibold text-gray-700">REU Research Intern — University of Missouri</h3>
+        <p class="text-sm text-gray-500">May 2025 – July 2025</p>
+        <ul class="list-disc list-inside mt-2 text-sm text-gray-700 space-y-1">
+          <li>Used LLMs to generate synthetic C/C++ vulnerabilities for GNN training.</li>
+          <li>Designed CWE-specific prompts and validated output using CodeQL and Clang.</li>
+          <li>Constructed ASTs, CFGs, and PDGs for graph-based training using PyTorch Geometric.</li>
+          <li>Prepared presentation for MU Summer Undergraduate Research Forum.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section class="mb-8">
+      <h2 class="text-xl font-semibold text-gray-800 border-b pb-1 mb-3">Projects</h2>
+
+      <div>
+        <h3 class="font-semibold text-gray-700">Study Buddy Android Application</h3>
+        <p class="text-sm italic text-gray-600">Technologies: Android Studio, Java, Volley, Spring Boot, MySQL</p>
+        <ul class="list-disc list-inside mt-2 text-sm text-gray-700 space-y-1">
+          <li>Developed an app for coordinating study sessions and real-time tracking.</li>
+          <li>Automated buddy matching based on shared class schedules.</li>
+          <li>Built full event management system with RSVP and tracking.</li>
+          <li>Logged study hours and visualized progress via user dashboard.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section>
+      <h2 class="text-xl font-semibold text-gray-800 border-b pb-1 mb-3">Technical Skills</h2>
+      <p class="text-sm text-gray-700"><strong>Languages:</strong> Python, Java, JavaScript, HTML, CSS, R (Intermediate), SAS, JMP</p>
+      <p class="text-sm text-gray-700"><strong>Technologies:</strong> React, Git, Android Studio</p>
+      <p class="text-sm text-gray-700"><strong>Concepts:</strong> Data Analysis, Frontend Development, Mobile App Development, Statistical Computing</p>
+      <p class="text-sm text-gray-700"><strong>Spoken Languages:</strong> Korean (Expert), English (Expert)</p>
+    </section>
   </div>
-
-  <section>
-    <h2>Education</h2>
-    <p><strong>Iowa State University</strong> — Ames, Iowa<br />
-      Bachelor of Science in Computer Science (GPA: 3.9/4.00), Minor in Statistics<br />
-      Expected Graduation: May 2027<br />
-      Relevant Coursework: Introduction to Data Structures (Java), Introduction to Object-Oriented Programming (Java), Computer Processing of Scientific Data (SAS), Intermediate Statistical Concepts and Methods, Linear Algebra, Discrete Computational Structures, Calculus I, II, III
-    </p>
-  </section>
-
-  <section>
-    <h2>Experience</h2>
-    <h3>Research Lab Assistant — Dr. Ying Cai, Iowa State University (Jan 2025 – Present)</h3>
-    <ul>
-      <li>Conducted in-depth literature review on convex polyhedral algorithms for rank-aware queries and identified areas for optimization.</li>
-      <li>Collaborated with graduate researchers to implement and test simplex method-based optimizations improving ranking algorithms and data retrieval efficiency.</li>
-      <li>Generated test data and evaluated scalability focusing on redundancy reduction and performance in large-scale environments.</li>
-    </ul>
-
-    <h3>REU Research Intern — University of Missouri Consumer Networking Technologies (May 2025 – July 2025)</h3>
-    <ul>
-      <li>Researched vulnerability detection in C/C++ code using LLMs (GPT-4, CodeLlama) to generate synthetic vulnerable functions for GNN training.</li>
-      <li>Designed LLM prompts to introduce specific CWEs and validated mutations with static analysis tools (CodeQL, Clang).</li>
-      <li>Built graph-based code representations (ASTs, CFGs, PDGs) and trained GNNs with PyTorch Geometric for vulnerability classification.</li>
-      <li>Preparing presentations for MU Summer Undergraduate Research Forum.</li>
-    </ul>
-  </section>
-
-  <section>
-    <h2>Projects</h2>
-    <h3>Study Buddy Android Application</h3>
-    <p><em>Technologies: Android Studio, Java, Volley, Spring Boot, MySQL</em></p>
-    <ul>
-      <li>Designed and developed an app to facilitate peer collaboration through study session coordination and real-time tracking.</li>
-      <li>Engineered automated study buddy matching to connect users based on shared classes, improving engagement.</li>
-      <li>Built event management system allowing users to create, RSVP, and manage study sessions.</li>
-      <li>Implemented study tracking module to log hours, set goals, and visualize progress.</li>
-    </ul>
-  </section>
-
-  <section>
-    <h2>Technical Skills</h2>
-    <p><strong>Languages:</strong> Python, Java, JavaScript, HTML, CSS, R (Intermediate), SAS (Intermediate), JMP (Intermediate)</p>
-    <p><strong>Technologies:</strong> React, Git, Android Studio</p>
-    <p><strong>Concepts:</strong> Data Analysis, Frontend Development, Mobile App Development, Statistical Computing</p>
-    <p><strong>Spoken Languages:</strong> Korean (Expert), English (Expert)</p>
-  </section>
 
 </body>
 </html>
