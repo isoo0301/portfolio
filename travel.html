@@ -1,53 +1,144 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Travel Page</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Lauren Kwon | Travel</title>
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Cuprum:wght@400;700&family=Pacifico&display=swap" rel="stylesheet">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Cuprum', 'sans-serif'],
+            script: ['Pacifico', 'cursive'],
+          },
+        },
+      },
+    }
+  </script>
 </head>
-<body class="bg-gray-50 text-gray-800">
+<body class="font-sans bg-gray-900 text-gray-300">
 
-    <div class="max-w-3xl mx-auto p-6">
-        <h1 class="text-3xl font-bold text-center mb-8">🌍 My Travel Page</h1>
+  <div class="max-w-4xl mx-auto p-6">
 
-        <!-- Places to Visit -->
-        <section id="places-to-visit" class="mb-12">
-            <h2 class="text-2xl font-semibold mb-4"> Places To Visit</h2>
-            <ul class="list-disc list-inside space-y-2">
-                <li>Shanghai, China</li>
-                <li>Newyork, USA</li>
-                <li>Barcelona, Spain</li>
-            </ul>
-        </section>
+    <h1 class="text-4xl font-script text-indigo-400 text-center mb-12">📸 My Travel Page</h1>
 
-        <!-- Places Went -->
-        <section id="places-went">
-            <h2 class="text-2xl font-semibold mb-4"> Places I've Been</h2>
-            
-            <div class="grid gap-6 md:grid-cols-2">
-                <!-- Place Card 1 -->
-                <div class="bg-white rounded-2xl shadow hover:shadow-lg transition overflow-hidden">
-                    <img src="./travel_visited/Columbia,MO.jpg" alt="Columbia, Missouri" class="h-48 w-full object-cover">
-                    <div class="p-4">
-                        <h3 class="text-lg font-semibold">University of Missouri, Columbia</h3>
-                        <p class="text-sm text-gray-600 mt-2">Researched during 2025 Summer!</p>
-                    </div>
-                </div>
 
-                <!-- Place Card 2 -->
-                <div class="bg-white rounded-2xl shadow hover:shadow-lg transition overflow-hidden">
-                    <img src="./travel_visited/Seoul.jpg" alt="Seoul, South Korea" class="h-48 w-full object-cover">
-                    <div class="p-4">
-                        <h3 class="text-lg font-semibold">Namsan Tower, Seoul, South Korea</h3>
-                        <p class="text-sm text-gray-600 mt-2">Showed my Japanese friend Rin the beauty of Namsan Tower.</p>
-                    </div>
-                </div>
+    <!-- Places Went -->
+    <section id="places-went">
+      <h2 class="text-3xl font-bold mb-6 text-indigo-400">Places I've Been</h2>
 
-                <!-- Add more place cards as needed -->
-            </div>
-        </section>
+
+      <div class="grid gap-8 md:grid-cols-2">
+        <div class="bg-gray-800 rounded-xl shadow-lg hover:shadow-indigo-600 transition overflow-hidden">
+          <img src="./travel_visited/Columbia.jpg" alt="Columbia, Missouri" class="h-48 w-full object-cover">
+          <div class="p-6">
+            <h3 class="text-xl font-semibold text-indigo-300">University of Missouri, Columbia, Missouri</h3>
+            <p class="text-gray-400 mt-2">Researched during 2025 Summer!</p>
+          </div>
+        </div>
+
+    <div class="bg-gray-800 rounded-xl shadow-lg hover:shadow-indigo-600 transition overflow-hidden">
+    <img src="./travel_visited/ames.jpg" alt="Iowa State University" class="h-48 w-full object-cover object-[center_60%]">
+    <div class="p-6">
+        <h3 class="text-xl font-semibold text-indigo-300">Iowa State University, Ames, Iowa</h3>
+        <p class="text-gray-400 mt-2">
+        Home of cornfields and unpredictable weather. It’s where I study, sleep, and survive the Midwest winters. 
     </div>
+    </div>
+
+    <div class="bg-gray-800 rounded-xl shadow-lg hover:shadow-indigo-600 transition overflow-hidden">
+        <img src="./travel_visited/washingtonDC.jpg" alt="Lincoln Memorial, Washington DC" class="h-48 w-full object-cover object-[center_60%]">
+        <div class="p-6">
+            <h3 class="text-xl font-semibold text-indigo-300">Lincoln Memorial, Washington DC</h3>
+            <p class="text-gray-400 mt-2">Visited while catching up with my friend who is doing her PhD at the University of Virginia.</p>
+        </div>
+    </div>
+
+    <div class="bg-gray-800 rounded-xl shadow-lg hover:shadow-indigo-600 transition overflow-hidden">
+      <img src="./travel_visited/michigan.jpg" alt="Pictured Rocks National Lakeshore, Michigan" class="h-48 w-full object-cover object-[center_45%]">
+      <div class="p-6">
+        <h3 class="text-xl font-semibold text-indigo-300">Pictured Rocks Lakeshore, Michigan</h3>
+        <p class="text-gray-400 mt-2">Backpacking trip during Spring Semester 2025 — an amazing adventure in nature!</p>
+      </div>
+    </div>
+
+    
+    <div class="bg-gray-800 rounded-xl shadow-lg hover:shadow-indigo-600 transition overflow-hidden">
+    <img src="./travel_visited/chicago.jpg" alt="Chicago IU Kpop Concert" class="h-48 w-full object-cover">
+    <div class="p-6">
+        <h3 class="text-xl font-semibold text-indigo-300">Chicago, Illinois</h3>
+        <p class="text-gray-400 mt-2">Attended the IU Kpop concert with my college friend, Ehlana!</p>
+    </div>
+    </div>
+
+    <div class="bg-gray-800 rounded-xl shadow-lg hover:shadow-indigo-600 transition overflow-hidden">
+    <img src="./travel_visited/minneapolis1.jpg" alt="Minneapolis Winter Break" class="h-48 w-full object-cover object-[center_45%]">
+    <div class="p-6">
+        <h3 class="text-xl font-semibold text-indigo-300">Stillwater, Minneapolis</h3>
+        <p class="text-gray-400 mt-2">
+        Visited Kate's house during winter break 2023 after freshman year.
+        </p>
+    </div>
+    </div>
+
+    <div class="bg-gray-800 rounded-xl shadow-lg hover:shadow-indigo-600 transition overflow-hidden">
+    <img src="./travel_visited/nevada.jpg" alt="Las Vegas" class="h-48 w-full object-cover object-[center_60%]">
+    <div class="p-6">
+        <h3 class="text-xl font-semibold text-indigo-300">Las Vegas, Nevada</h3>
+        <p class="text-gray-400 mt-2">
+        Reconnected with my childhood best friend in Las Vegas right after graduating high school.</p>
+    </div>
+    </div>
+
+    <div class="bg-gray-800 rounded-xl shadow-lg hover:shadow-indigo-600 transition overflow-hidden">
+    <img src="./travel_visited/redondo.jpg" alt="Santa Monica Pier" class="h-48 w-full object-cover">
+    <div class="p-6">
+        <h3 class="text-xl font-semibold text-indigo-300">Santa Monica Pier, California</h3>
+        <p class="text-gray-400 mt-2">
+         Took an electric bike ride with Justin along the California coast—from Redondo Beach to the Santa Monica Pier.
+        </div>
+    </div>
+
+    <div class="bg-gray-800 rounded-xl shadow-lg hover:shadow-indigo-600 transition overflow-hidden">
+    <img src="./travel_visited/griffith2.jpg" alt="Griffith Observatory" class="h-48 w-full object-cover  object-[center_45%]">
+    <div class="p-6">
+        <h3 class="text-xl font-semibold text-indigo-300">Griffith Observatory, California</h3>
+        <p class="text-gray-400 mt-2">
+        Spent few days with Sabrina, one of my oldest friends. Clear skies, great views, and a chill catch-up.</div>
+    </div>
+
+    <div class="bg-gray-800 rounded-xl shadow-lg hover:shadow-indigo-600 transition overflow-hidden">
+    <img src="./travel_visited/seoul.jpg" alt="Jamsu Bridge, Seoul, South Korea" class="h-48 w-full object-cover object-[center_55%]">
+    <div class="p-6">
+        <h3 class="text-xl font-semibold text-indigo-300">Jamsu Bridge, Seoul, South Korea</h3>
+        <p class="text-gray-400 mt-2">My favorite running spot back home in South Korea.</p>
+    </div>
+    </div>
+
+    </section>
+
+
+
+<!-- Places To Visit -->
+<section id="places-to-visit" class="mt-16 mb-12">
+  <h2 class="text-3xl font-bold mb-6 text-indigo-400">Places To Visit</h2>
+  <ul class="list-disc list-inside space-y-3 text-gray-300">
+    <li>Shanghai, China</li>
+    <li>New York, USA</li>
+    <li>Barcelona, Spain</li>
+  </ul>
+</section>
+
+
+  </div>
 
 </body>
 </html>
