@@ -3,142 +3,240 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Travel notes from Lauren Kwon." />
   <title>Lauren Kwon | Travel</title>
 
-  <!-- Tailwind CSS -->
-  <script src="https://cdn.tailwindcss.com"></script>
-
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Cuprum:wght@400;700&family=Pacifico&display=swap" rel="stylesheet">
-
   <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          fontFamily: {
-            sans: ['Cuprum', 'sans-serif'],
-            script: ['Pacifico', 'cursive'],
-          },
-        },
-      },
-    }
+    (function () {
+      try {
+        var saved = localStorage.getItem("lk-theme");
+        var theme = saved || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+        document.documentElement.setAttribute("data-theme", theme);
+      } catch (e) {}
+    })();
   </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    .page-intro {
+      padding: 3rem 0 1.25rem;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .page-intro h1 {
+      font-size: clamp(1.8rem, 4vw, 2.4rem);
+      font-weight: 600;
+      letter-spacing: -0.03em;
+      margin-bottom: 0.5rem;
+    }
+
+    .page-intro p {
+      color: var(--muted);
+      max-width: 34rem;
+      font-size: 0.98rem;
+    }
+
+    .place-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 0.85rem;
+    }
+
+    .place {
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      overflow: hidden;
+      background: var(--bg-elevated);
+    }
+
+    .place img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-bottom: 1px solid var(--line);
+      background: var(--bg-muted);
+    }
+
+    .place-body {
+      padding: 0.9rem 1rem 1rem;
+    }
+
+    .place-body h3 {
+      font-size: 0.95rem;
+      font-weight: 600;
+      margin-bottom: 0.25rem;
+    }
+
+    .place-body p {
+      color: var(--ink-secondary);
+      font-size: 0.88rem;
+    }
+
+    .wishlist {
+      display: grid;
+      gap: 0.4rem;
+      color: var(--ink-secondary);
+      font-size: 0.95rem;
+    }
+
+    .wishlist li {
+      padding-left: 0.9rem;
+      position: relative;
+    }
+
+    .wishlist li::before {
+      content: "–";
+      position: absolute;
+      left: 0;
+      color: var(--muted);
+    }
+
+    @media (max-width: 720px) {
+      .place-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
 </head>
-<body class="font-sans bg-gray-900 text-gray-300">
-
-  <div class="max-w-4xl mx-auto p-6">
-
-    <h1 class="text-4xl font-script text-indigo-400 text-center mb-12">📸 My Travel Page</h1>
-
-
-    <!-- Places Went -->
-    <section id="places-went">
-      <h2 class="text-3xl font-bold mb-6 text-indigo-400">Places I've Been</h2>
-
-
-      <div class="grid gap-8 md:grid-cols-2">
-        <div class="bg-gray-800 rounded-xl shadow-lg hover:shadow-indigo-600 transition overflow-hidden">
-          <img src="./travel_visited/Columbia.jpg" alt="Columbia, Missouri" class="h-48 w-full object-cover">
-          <div class="p-6">
-            <h3 class="text-xl font-semibold text-indigo-300">University of Missouri, Columbia, Missouri</h3>
-            <p class="text-gray-400 mt-2">Researched during 2025 Summer!</p>
-          </div>
+<body>
+  <header class="nav">
+    <div class="container nav-inner">
+      <a class="brand" href="index.html">Lauren Kwon</a>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="index.html#experience">Experience</a>
+        <a href="index.html#projects">Projects</a>
+        <a href="index.html#skills">Skills</a>
+        <a href="index.html#contact">Contact</a>
+        <a href="travel.html">Travel</a>
+      </nav>
+      <div class="nav-actions">
+        <div class="nav-social">
+          <a href="https://github.com/isoo0301" aria-label="GitHub" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/lauren-kwon01/" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin"></i></a>
+          <a href="mailto:lauren030109@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
         </div>
-
-    <div class="bg-gray-800 rounded-xl shadow-lg hover:shadow-indigo-600 transition overflow-hidden">
-    <img src="./travel_visited/ames.jpg" alt="Iowa State University" class="h-48 w-full object-cover object-[center_60%]">
-    <div class="p-6">
-        <h3 class="text-xl font-semibold text-indigo-300">Iowa State University, Ames, Iowa</h3>
-        <p class="text-gray-400 mt-2">
-        Home of cornfields and unpredictable weather. It’s where I study, sleep, and survive the Midwest winters. 
-    </div>
-    </div>
-
-    <div class="bg-gray-800 rounded-xl shadow-lg hover:shadow-indigo-600 transition overflow-hidden">
-        <img src="./travel_visited/washingtonDC.jpg" alt="Lincoln Memorial, Washington DC" class="h-48 w-full object-cover object-[center_60%]">
-        <div class="p-6">
-            <h3 class="text-xl font-semibold text-indigo-300">Lincoln Memorial, Washington DC</h3>
-            <p class="text-gray-400 mt-2">Visited while catching up with my friend who is doing her PhD at the University of Virginia.</p>
-        </div>
-    </div>
-
-    <div class="bg-gray-800 rounded-xl shadow-lg hover:shadow-indigo-600 transition overflow-hidden">
-      <img src="./travel_visited/michigan.jpg" alt="Pictured Rocks National Lakeshore, Michigan" class="h-48 w-full object-cover object-[center_45%]">
-      <div class="p-6">
-        <h3 class="text-xl font-semibold text-indigo-300">Pictured Rocks Lakeshore, Michigan</h3>
-        <p class="text-gray-400 mt-2">Backpacking trip during Spring Semester 2025 — an amazing adventure in nature!</p>
+        <button type="button" class="theme-toggle" id="theme-toggle" aria-label="Toggle color theme">
+          <i class="fa-solid fa-moon icon-moon" aria-hidden="true"></i>
+          <i class="fa-solid fa-sun icon-sun" aria-hidden="true"></i>
+        </button>
       </div>
     </div>
+  </header>
 
-    
-    <div class="bg-gray-800 rounded-xl shadow-lg hover:shadow-indigo-600 transition overflow-hidden">
-    <img src="./travel_visited/chicago.jpg" alt="Chicago IU Kpop Concert" class="h-48 w-full object-cover">
-    <div class="p-6">
-        <h3 class="text-xl font-semibold text-indigo-300">Chicago, Illinois</h3>
-        <p class="text-gray-400 mt-2">Attended the IU Kpop concert with my college friend, Ehlana!</p>
-    </div>
-    </div>
-
-    <div class="bg-gray-800 rounded-xl shadow-lg hover:shadow-indigo-600 transition overflow-hidden">
-    <img src="./travel_visited/minneapolis1.jpg" alt="Minneapolis Winter Break" class="h-48 w-full object-cover object-[center_45%]">
-    <div class="p-6">
-        <h3 class="text-xl font-semibold text-indigo-300">Stillwater, Minneapolis</h3>
-        <p class="text-gray-400 mt-2">
-        Visited Kate's house during winter break 2023 after freshman year.
-        </p>
-    </div>
-    </div>
-
-    <div class="bg-gray-800 rounded-xl shadow-lg hover:shadow-indigo-600 transition overflow-hidden">
-    <img src="./travel_visited/nevada.jpg" alt="Las Vegas" class="h-48 w-full object-cover object-[center_60%]">
-    <div class="p-6">
-        <h3 class="text-xl font-semibold text-indigo-300">Las Vegas, Nevada</h3>
-        <p class="text-gray-400 mt-2">
-        Reconnected with my childhood best friend in Las Vegas right after graduating high school.</p>
-    </div>
-    </div>
-
-    <div class="bg-gray-800 rounded-xl shadow-lg hover:shadow-indigo-600 transition overflow-hidden">
-    <img src="./travel_visited/redondo.jpg" alt="Santa Monica Pier" class="h-48 w-full object-cover">
-    <div class="p-6">
-        <h3 class="text-xl font-semibold text-indigo-300">Santa Monica Pier, California</h3>
-        <p class="text-gray-400 mt-2">
-         Took an electric bike ride with Justin along the California coast—from Redondo Beach to the Santa Monica Pier.
-        </div>
-    </div>
-
-    <div class="bg-gray-800 rounded-xl shadow-lg hover:shadow-indigo-600 transition overflow-hidden">
-    <img src="./travel_visited/griffith2.jpg" alt="Griffith Observatory" class="h-48 w-full object-cover  object-[center_45%]">
-    <div class="p-6">
-        <h3 class="text-xl font-semibold text-indigo-300">Griffith Observatory, California</h3>
-        <p class="text-gray-400 mt-2">
-        Spent few days with Sabrina, one of my oldest friends. Clear skies, great views, and a chill catch-up.</div>
-    </div>
-
-    <div class="bg-gray-800 rounded-xl shadow-lg hover:shadow-indigo-600 transition overflow-hidden">
-    <img src="./travel_visited/seoul.jpg" alt="Jamsu Bridge, Seoul, South Korea" class="h-48 w-full object-cover object-[center_55%]">
-    <div class="p-6">
-        <h3 class="text-xl font-semibold text-indigo-300">Jamsu Bridge, Seoul, South Korea</h3>
-        <p class="text-gray-400 mt-2">My favorite running spot back home in South Korea.</p>
-    </div>
-    </div>
-
+  <main>
+    <section class="page-intro">
+      <div class="container">
+        <p class="section-label">Travel</p>
+        <h1>Selected places</h1>
+        <p>Personal travel notes — secondary to the main portfolio.</p>
+      </div>
     </section>
 
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <h2>Visited</h2>
+        </div>
+        <div class="place-grid">
+          <article class="place">
+            <img src="./travel_visited/Columbia.jpg" alt="Columbia, Missouri" />
+            <div class="place-body">
+              <h3>Columbia, Missouri</h3>
+              <p>University of Missouri — summer 2025 research.</p>
+            </div>
+          </article>
+          <article class="place">
+            <img src="./travel_visited/ames.jpg" alt="Iowa State University campus" style="object-position: center 60%;" />
+            <div class="place-body">
+              <h3>Ames, Iowa</h3>
+              <p>Iowa State University — academic home base.</p>
+            </div>
+          </article>
+          <article class="place">
+            <img src="./travel_visited/washingtonDC.jpg" alt="Lincoln Memorial in Washington, D.C." style="object-position: center 60%;" />
+            <div class="place-body">
+              <h3>Washington, D.C.</h3>
+              <p>Lincoln Memorial while visiting a friend at UVA.</p>
+            </div>
+          </article>
+          <article class="place">
+            <img src="./travel_visited/michigan.jpg" alt="Pictured Rocks National Lakeshore" style="object-position: center 45%;" />
+            <div class="place-body">
+              <h3>Pictured Rocks, Michigan</h3>
+              <p>Backpacking, spring 2025.</p>
+            </div>
+          </article>
+          <article class="place">
+            <img src="./travel_visited/chicago.jpg" alt="Chicago" />
+            <div class="place-body">
+              <h3>Chicago, Illinois</h3>
+              <p>Weekend trip for a concert.</p>
+            </div>
+          </article>
+          <article class="place">
+            <img src="./travel_visited/minneapolis1.jpg" alt="Stillwater near Minneapolis" style="object-position: center 45%;" />
+            <div class="place-body">
+              <h3>Stillwater, Minnesota</h3>
+              <p>Winter break visit after freshman year.</p>
+            </div>
+          </article>
+          <article class="place">
+            <img src="./travel_visited/nevada.jpg" alt="Las Vegas" style="object-position: center 60%;" />
+            <div class="place-body">
+              <h3>Las Vegas, Nevada</h3>
+              <p>Reconnect with a childhood friend after graduation.</p>
+            </div>
+          </article>
+          <article class="place">
+            <img src="./travel_visited/redondo.jpg" alt="Santa Monica Pier" />
+            <div class="place-body">
+              <h3>Santa Monica, California</h3>
+              <p>Coastal bike ride from Redondo Beach to the pier.</p>
+            </div>
+          </article>
+          <article class="place">
+            <img src="./travel_visited/griffith2.jpg" alt="Griffith Observatory" style="object-position: center 45%;" />
+            <div class="place-body">
+              <h3>Griffith Observatory, California</h3>
+              <p>Short visit with a longtime friend.</p>
+            </div>
+          </article>
+          <article class="place">
+            <img src="./travel_visited/seoul.jpg" alt="Jamsu Bridge in Seoul" style="object-position: center 55%;" />
+            <div class="place-body">
+              <h3>Seoul, South Korea</h3>
+              <p>Jamsu Bridge — regular running route.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
 
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <h2>Next</h2>
+        </div>
+        <ul class="wishlist">
+          <li>Shanghai, China</li>
+          <li>New York, USA</li>
+          <li>Barcelona, Spain</li>
+        </ul>
+      </div>
+    </section>
+  </main>
 
-<!-- Places To Visit -->
-<section id="places-to-visit" class="mt-16 mb-12">
-  <h2 class="text-3xl font-bold mb-6 text-indigo-400">Places To Visit</h2>
-  <ul class="list-disc list-inside space-y-3 text-gray-300">
-    <li>Shanghai, China</li>
-    <li>New York, USA</li>
-    <li>Barcelona, Spain</li>
-  </ul>
-</section>
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p><a href="index.html">Back to portfolio</a></p>
+      <p>Lauren Kwon</p>
+    </div>
+  </footer>
 
-
-  </div>
-
+  <script src="script.js"></script>
 </body>
 </html>
